@@ -209,6 +209,11 @@ svg {
   color: #7f8cff;
   text-transform: uppercase;
   margin: 12px 0;
+  text-decoration: none;
+}
+
+.hero .sub-title:hover {
+  color: #6070ff;
 }
 
 .hero .social-links {
