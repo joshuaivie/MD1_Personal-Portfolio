@@ -196,11 +196,13 @@ svg {
   margin: 40px 0 12px;
 }
 
-.hero .introduction {
+.hero .introduction,
+.about-me .introduction {
   margin: 12px 0 24px;
 }
 
-.hero .sub-title {
+.hero .sub-title,
+.about-me .sub-title {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -212,26 +214,31 @@ svg {
   text-decoration: none;
 }
 
-.hero .sub-title:hover {
+.hero .sub-title:hover,
+.about-me .sub-title:hover {
   color: #6070ff;
 }
 
-.hero .social-links {
+.hero .social-links,
+.about-me .social-links {
   display: flex;
   align-items: center;
   margin: 12px 0;
 }
 
+.about-me .link,
 .hero .social-links .link {
   margin-right: 15px;
   font-size: 28px;
 }
 
-.hero .social-links .link a {
+.hero .social-links .link a,
+.about-me .social-links .link a {
   color: #505f79;
 }
 
-.hero .social-links .link a:hover {
+.hero .social-links .link a:hover,
+.about-me .social-links .link a:hover {
   color: #7f8cff;
 }
 
@@ -329,7 +336,8 @@ svg {
   margin-right: 8px;
 }
 
-.my-works .work-item .view-work-btn {
+.my-works .work-item .view-work-btn,
+.about-me .resume-btn {
   border-radius: 8px;
   text-align: center;
   padding: 12px;
@@ -341,15 +349,69 @@ svg {
   line-height: 24px;
 }
 
-.my-works .work-item .view-work-btn:enabled {
+.my-works .work-item .view-work-btn:enabled,
+.about-me .resume-btn:enabled {
   color: #6070ff;
   border: solid 1px #6070ff;
   background-color: #fff;
 }
 
 .my-works .work-item .view-work-btn:hover,
-.my-works .work-item .view-work-btn:active {
+.my-works .work-item .view-work-btn:active,
+.about-me .resume-btn:hover,
+.about-me .resume-btn:active {
   color: #fff;
   border: solid 1px #6070ff;
   background-color: #6070ff;
+}
+
+.about-me {
+  padding: 120px 24px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.about-me .top,
+.about-me .bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin: 24px 0;
+  width: 100%;
+}
+
+.about-me .top .title {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 52px;
+  color: #172b4d;
+}
+
+.about-me .bottom .technical-knowledge {
+  width: 100%;
+}
+
+.about-me .bottom .technical-knowledge .knowledge-area {
+  padding: 24px 12px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dfe1e6;
+}
+
+.about-me .bottom .technical-knowledge .knowledge-area.active {
+  border: none;
+}
+
+.about-me .bottom .technical-knowledge .knowledge-area .title {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
 }
