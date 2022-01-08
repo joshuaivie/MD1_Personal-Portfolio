@@ -260,6 +260,10 @@ svg {
   align-items: baseline;
 }
 
+.technical-knowledge-list li img {
+  margin-right: 16px;
+}
+
 .my-works .work-item img {
   width: 100%;
 }
@@ -414,4 +418,17 @@ svg {
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
+}
+
+.technical-knowledge-list li {
+  padding: 12px;
+  background-color: #f7f7f9;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #253858;
 }
