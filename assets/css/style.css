@@ -454,3 +454,15 @@ svg {
   line-height: 28px;
   color: #EBEBFF;;
 }
+
+form {
+  margin: 80px 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+form ul li input,
+textarea {
+  margin:  20px 0 0 0;
+  width: 327px;
+}
