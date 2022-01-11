@@ -432,3 +432,25 @@ svg {
   line-height: 20px;
   color: #253858;
 }
+
+.footer {
+  background-color: #6070FF;
+}
+
+.title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 52px;
+  color: #fff;
+}
+
+.description {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  color: #EBEBFF;;
+}
