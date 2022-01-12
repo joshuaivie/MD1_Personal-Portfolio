@@ -128,6 +128,11 @@ table {
   border-spacing: 0;
 }
 
+input::placeholder,
+textarea::placeholder {
+  color: #b3bac5;
+}
+
 .top-navigation {
   background-color: #fff;
   display: flex;
@@ -341,6 +346,7 @@ svg {
 }
 
 .my-works .work-item .view-work-btn,
+.contact-form .submit-btn,
 .about-me .resume-btn {
   border-radius: 8px;
   text-align: center;
@@ -354,6 +360,7 @@ svg {
 }
 
 .my-works .work-item .view-work-btn:enabled,
+.contact-form .submit-btn:enabled,
 .about-me .resume-btn:enabled {
   color: #6070ff;
   border: solid 1px #6070ff;
@@ -388,6 +395,7 @@ svg {
   width: 100%;
 }
 
+.footer .contact-intro .title,
 .about-me .top .title {
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -434,35 +442,84 @@ svg {
 }
 
 .footer {
-  background-color: #6070FF;
+  background-color: #6070ff;
+  position: relative;
+  padding: 120px 24px 48px;
 }
 
-.title {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 52px;
+.footer .footer-shapes {
+  background-image: url("../img/contact form shapes-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 21px;
+  right: -42px;
+  width: 100%;
+  height: 709.17px;
+}
+
+.footer .footer-content {
+  position: relative;
+  z-index: 10;
+}
+
+.footer .contact-intro {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.footer .contact-intro .title {
   color: #fff;
+  margin-bottom: 12px;
 }
 
-.description {
-  font-family: Poppins;
+.footer .contact-intro .description {
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 28px;
-  color: #EBEBFF;;
+  color: #ebebff;
 }
 
-form {
-  margin: 80px 0 0 0;
+.footer .contact-form {
   display: flex;
-  justify-content: center;
 }
 
-form ul li input,
-textarea {
-  margin:  20px 0 0 0;
-  width: 327px;
+.footer .contact-form ul {
+  flex-grow: 1;
+}
+
+.footer .contact-form li {
+  display: flex;
+}
+
+.footer .contact-form ul li input,
+.footer .contact-form ul li textarea {
+  background: #ffffff;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  line-height: 20px;
+  flex-grow: 1;
+  color: #172b4d;
+}
+
+.footer .contact-form ul li textarea {
+  font-size: 17px;
+  line-height: 20px;
+}
+
+.footer .contact-form ul li .submit-btn {
+  margin-top: 0;
+}
+
+.footer .contact-form ul li .submit-btn:hover,
+.footer .contact-form ul li .submit-btn:active {
+  color: #fff;
+  border: solid 1px #7f8cff;
+  background-color: #7f8cff;
 }
