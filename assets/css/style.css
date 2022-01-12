@@ -450,6 +450,7 @@ svg {
   background-color: #6070ff;
   position: relative;
   padding: 120px 24px 48px;
+  overflow: hidden;
 }
 
 .footer .footer-shapes {
