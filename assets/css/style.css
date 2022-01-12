@@ -133,8 +133,11 @@ textarea::placeholder {
   color: #b3bac5;
 }
 
-.top-navigation {
+header {
   background-color: #fff;
+}
+
+.top-navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -165,13 +168,14 @@ svg {
 }
 
 .hero {
-  background-image: url("../img/header-background-mobile.svg");
   background-color: #fff;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 120px 24px;
   position: relative;
+  border-bottom-left-radius: 80px;
+  border-bottom: 1px solid #dfe1e6;
 }
 
 .hero .hero-shapes {
@@ -523,4 +527,69 @@ svg {
   color: #fff;
   border: solid 1px #7f8cff;
   background-color: #7f8cff;
+}
+
+.navigation-menu {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .top-navigation {
+    max-width: 1156px;
+    margin: 0 auto;
+  }
+
+  .top-navigation .menu-toggle {
+    display: none;
+  }
+
+  .top-navigation .navigation-menu {
+    display: block;
+  }
+
+  .top-navigation .navigation-menu ul {
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    list-style: none;
+  }
+
+  .navigation-menu ul li {
+    padding: 10px 12px;
+    margin: 0 8px;
+  }
+
+  .navigation-menu ul li a {
+    text-decoration: none;
+    color: #344563;
+  }
+
+  .navigation-menu ul li a:hover,
+  .navigation-menu ul li a:active {
+    color: #6070ff;
+  }
+
+  .hero {
+    height: calc(100vh - 100px);
+    min-height: 720px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero .hero-content {
+    width: 75%;
+    max-width: 1156px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .hero .social-links,
+  .about-me .social-links {
+    margin: 0;
+  }
 }
