@@ -405,6 +405,11 @@ svg {
   color: #172b4d;
 }
 
+.footer .contact-intro .title {
+  color: #fff;
+  margin-bottom: 12px;
+}
+
 .about-me .bottom .technical-knowledge {
   width: 100%;
 }
@@ -468,11 +473,6 @@ svg {
   margin-bottom: 36px;
 }
 
-.footer .contact-intro .title {
-  color: #fff;
-  margin-bottom: 12px;
-}
-
 .footer .contact-intro .description {
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -496,7 +496,7 @@ svg {
 
 .footer .contact-form ul li input,
 .footer .contact-form ul li textarea {
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #cfd8dc;
   border-radius: 8px;
   padding: 16px;
