@@ -89,6 +89,10 @@ video {
   vertical-align: baseline;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 article,
 aside,
 details,
@@ -137,6 +141,45 @@ header {
   background-color: #fff;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: #172b4d;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: #101d33;
+}
+
+::-webkit-scrollbar:horizontal {
+  display: none;
+}
+
+.scroll-to-top {
+  cursor: pointer;
+  padding: 12px;
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 100;
+  border: none;
+  color: #fff;
+  display: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #172b4d;
+  transition: all 0.3s ease-in-out;
+}
+
+.scroll-to-top:hover {
+  background-color: #101d33;
+}
+
 .top-navigation {
   display: flex;
   justify-content: space-between;
@@ -174,7 +217,7 @@ svg {
   background-size: cover;
   padding: 120px 24px;
   position: relative;
-  border-bottom-left-radius: 80px;
+  border-bottom-left-radius: 120px;
   border-bottom: 1px solid #dfe1e6;
 }
 
@@ -326,7 +369,7 @@ svg {
 
 .my-works .work-item .work-details {
   color: #344563;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 24px;
   margin: 20px 0 12px;
 }
@@ -361,6 +404,7 @@ svg {
   font-weight: 500;
   font-size: 17px;
   line-height: 24px;
+  transition: all 0.3s ease;
 }
 
 .my-works .work-item .view-work-btn:enabled,
@@ -412,6 +456,11 @@ svg {
 .footer .contact-intro .title {
   color: #fff;
   margin-bottom: 12px;
+}
+
+.about-me-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .about-me .bottom .technical-knowledge {
@@ -533,9 +582,15 @@ svg {
   display: none;
 }
 
+.font-weight-normal {
+  font-weight: 400;
+}
+
 @media (min-width: 992px) {
-  .top-navigation {
-    max-width: 1156px;
+  .top-navigation,
+  .my-works,
+  .about-me-container {
+    max-width: 1100px;
     margin: 0 auto;
   }
 
@@ -582,7 +637,7 @@ svg {
 
   .hero .hero-content {
     width: 75%;
-    max-width: 1156px;
+    max-width: 1100px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -591,5 +646,70 @@ svg {
   .hero .social-links,
   .about-me .social-links {
     margin: 0;
+  }
+
+  .my-works {
+    padding: 142px 24px;
+    grid-gap: 142px;
+  }
+
+  .my-works .work-item {
+    padding: 24px;
+    flex-direction: row;
+    align-items: flex-start;
+    border-radius: 24px;
+    transition: all 0.3s ease;
+  }
+
+  .my-works .work-item:hover {
+    cursor: pointer;
+    border: 1px solid #a7aeff;
+    filter: drop-shadow(0 48px 48px rgba(37, 47, 137, 0.08));
+  }
+
+  .my-works .work-item:hover .view-work-btn:enabled,
+  .my-works .work-item:hover .view-work-btn:hover {
+    background-color: #4053fc;
+    box-shadow: 0px 8px 16px rgba(64, 83, 252, 0.24);
+    color: #fff;
+  }
+
+  .my-works .work-item.reverse-item {
+    flex-direction: row-reverse;
+  }
+
+  .my-works .work-item.reverse-item .work-item-content {
+    margin-left: 0;
+    margin-right: 24px;
+  }
+
+  .my-works .work-item img {
+    flex-grow: 1;
+    width: 50%;
+  }
+
+  .my-works .work-item .work-item-content {
+    margin-left: 24px;
+    flex-grow: 1;
+    padding: 22px;
+  }
+
+  .my-works .work-item .work-item-content .work-title {
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .my-works .work-item .work-item-content .work-subtitle {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+
+  .my-works .work-item .work-details {
+    margin-bottom: 28px;
+  }
+
+  .my-works .work-item .work-technologies {
+    margin-bottom: 16px;
   }
 }
