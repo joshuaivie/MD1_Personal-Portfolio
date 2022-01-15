@@ -584,10 +584,54 @@ svg {
 
 .footer .footer-shapes {
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   width: 100%;
   height: 100%;
+}
+
+.footer .footer-shapes .shape {
+  position: absolute;
+}
+
+.footer .footer-shapes .rectangle-4 {
+  left: 84.14%;
+  top: 9.34%;
+}
+
+.footer .footer-shapes .rectangle-6 {
+  left: 23.4%;
+  top: 87.59%;
+}
+
+.footer .footer-shapes .rectangle-7 {
+  left: 5.82%;
+  top: 39.95%;
+}
+
+.footer .footer-shapes .ellipse-3 {
+  left: 85.9%;
+  top: 14.07%;
+}
+
+.footer .footer-shapes .ellipse-5 {
+  left: 5.23%;
+  top: 44.09%;
+}
+
+.footer .footer-shapes .ellipse-11 {
+  left: 24.86%;
+  top: 90.07%;
+}
+
+.footer .footer-shapes .ellipse-12 {
+  left: 32.64%;
+  top: 13.48%;
+}
+
+.footer .footer-shapes .ellipse-13 {
+  left: 78.4%;
+  top: 61.58%;
 }
 
 .footer .footer-content {
@@ -743,12 +787,18 @@ svg {
   .my-works .work-item:hover .view-work-btn:enabled,
   .my-works .work-item:hover .view-work-btn:hover {
     background-color: #4053fc;
-    box-shadow: 0px 8px 16px rgba(64, 83, 252, 0.24);
+    box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
     color: #fff;
   }
 
   .my-works .work-item.reverse-item {
     flex-direction: row-reverse;
+  }
+
+  .my-works .work-item .work-item-content {
+    margin-left: 24px;
+    flex-grow: 1;
+    padding: 22px;
   }
 
   .my-works .work-item.reverse-item .work-item-content {
@@ -759,12 +809,6 @@ svg {
   .my-works .work-item img {
     flex-grow: 1;
     width: 50%;
-  }
-
-  .my-works .work-item .work-item-content {
-    margin-left: 24px;
-    flex-grow: 1;
-    padding: 22px;
   }
 
   .my-works .work-item .work-item-content .work-title {
@@ -807,10 +851,6 @@ svg {
     margin-bottom: 12px;
   }
 
-  .about-me-container .top .title {
-    width: 120px;
-  }
-
   .about-me-container .top .sub-title {
     margin-bottom: 24px;
   }
@@ -826,6 +866,10 @@ svg {
   .about-me-container .bottom .technical-knowledge-list {
     display: flex;
     flex: 1;
+  }
+
+  .footer .contact-form li {
+    justify-content: center;
   }
 
   .about-me-container .bottom .technical-knowledge-list li {
@@ -853,9 +897,5 @@ svg {
 
   .footer .contact-form {
     padding: 0 24px;
-  }
-
-  .footer .contact-form li {
-    justify-content: center;
   }
 }
