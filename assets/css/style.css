@@ -117,6 +117,10 @@ body {
   line-height: 24px;
 }
 
+button {
+  cursor: pointer;
+}
+
 ol,
 ul {
   list-style: none;
@@ -222,15 +226,86 @@ svg {
 }
 
 .hero .hero-shapes {
-  background-image: url("../img/header-shapes-mobile.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   position: absolute;
-  top: 0;
+  top: -2.5%;
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.hero .hero-shapes .shape {
+  position: absolute;
+  transform: scale(0.75);
+}
+
+.hero .hero-shapes .rectangle-4 {
+  left: 80%;
+  top: 1.96%;
+}
+
+.hero .hero-shapes .rectangle-5 {
+  left: 50.79%;
+  top: 70.1%;
+}
+
+.hero .hero-shapes .rectangle-6 {
+  left: 2.4%;
+  top: 4.36%;
+}
+
+.hero .hero-shapes .rectangle-7 {
+  left: 48.14%;
+  top: 15.14%;
+}
+
+.hero .hero-shapes .eclipse-3 {
+  left: 83.33%;
+  top: 10.02%;
+}
+
+.hero .hero-shapes .eclipse-4 {
+  left: 58.26%;
+  top: 71.57%;
+}
+
+.hero .hero-shapes .eclipse-5 {
+  left: 49.16%;
+  top: 16.99%;
+}
+
+.hero .hero-shapes .eclipse-6 {
+  left: 81.53%;
+  top: 59.15%;
+}
+
+.hero .hero-shapes .eclipse-7 {
+  left: 67.01%;
+  top: 5.66%;
+}
+
+.hero .hero-shapes .eclipse-8 {
+  left: 26.32%;
+  top: 6.97%;
+}
+
+.hero .hero-shapes .eclipse-11 {
+  left: 4.53%;
+  top: 9.91%;
+}
+
+.hero .hero-shapes .eclipse-12 {
+  left: 20.19%;
+  top: 72.77%;
+}
+
+.hero .hero-shapes .eclipse-13 {
+  left: 19.17%;
+  top: 73.97%;
+}
+
+.hero .hero-shapes .eclipse-14 {
+  left: 5.07%;
+  top: 44.77%;
 }
 
 .hero .hero-content {
@@ -441,6 +516,7 @@ svg {
   align-items: baseline;
   margin: 24px 0;
   width: 100%;
+  flex-basis: 0;
 }
 
 .footer .contact-intro .title,
@@ -507,14 +583,11 @@ svg {
 }
 
 .footer .footer-shapes {
-  background-image: url("../img/contact form shapes-mobile.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
   position: absolute;
-  top: 21px;
-  right: -42px;
+  top: 0px;
+  right: 0px;
   width: 100%;
-  height: 709.17px;
+  height: 100%;
 }
 
 .footer .footer-content {
@@ -711,5 +784,78 @@ svg {
 
   .my-works .work-item .work-technologies {
     margin-bottom: 16px;
+  }
+
+  .about-me-container {
+    flex-direction: row;
+  }
+
+  .about-me-container .top {
+    flex-grow: 1;
+    padding-right: 48px;
+  }
+
+  .about-me-container .bottom {
+    flex-grow: 1.5;
+  }
+
+  .about-me-container .top .title {
+    width: 120px;
+  }
+
+  .about-me-container .top .introduction {
+    margin-bottom: 12px;
+  }
+
+  .about-me-container .top .title {
+    width: 120px;
+  }
+
+  .about-me-container .top .sub-title {
+    margin-bottom: 24px;
+  }
+
+  .about-me-container .top .resume-btn {
+    margin: 32px 0;
+  }
+
+  .about-me-container .bottom .knowledge-area.active {
+    margin-bottom: 12px;
+  }
+
+  .about-me-container .bottom .technical-knowledge-list {
+    display: flex;
+    flex: 1;
+  }
+
+  .about-me-container .bottom .technical-knowledge-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 120px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    margin-right: 12px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 17.5%;
+  }
+
+  .about-me-container .bottom .technical-knowledge-list li img {
+    padding-bottom: 16px;
+  }
+
+  .footer .footer-content {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .footer .contact-form {
+    padding: 0 24px;
+  }
+
+  .footer .contact-form li {
+    justify-content: center;
   }
 }
