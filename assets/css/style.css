@@ -221,89 +221,139 @@ svg {
   background-size: cover;
   padding: 120px 24px;
   position: relative;
-  border-bottom-left-radius: 120px;
+  border-bottom-left-radius: 100px;
   border-bottom: 1px solid #dfe1e6;
+  overflow: hidden;
 }
 
 .hero .hero-shapes {
   position: absolute;
-  top: -2.5%;
-  left: 0;
   width: 100%;
   height: 100%;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
 }
 
 .hero .hero-shapes .shape {
   position: absolute;
-  transform: scale(0.75);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: initial;
 }
 
 .hero .hero-shapes .rectangle-4 {
-  left: 80%;
-  top: 1.96%;
+  width: 95.58px;
+  height: 22.02px;
+  background: #ebebff;
+  transform: rotate(-30deg);
+  left: 78.4%;
+  top: 2.38%;
 }
 
 .hero .hero-shapes .rectangle-5 {
-  left: 50.79%;
-  top: 70.1%;
+  width: 68.06px;
+  height: 12.18px;
+  background: #ebebff;
+  transform: rotate(23.34deg);
+  left: 46%;
+  top: 82%;
 }
 
 .hero .hero-shapes .rectangle-6 {
-  left: 2.4%;
-  top: 4.36%;
+  width: 51.99px;
+  height: 9.3px;
+  background: #ebebff;
+  transform: rotate(-46.14deg);
+  left: -9.07%;
+  top: 0%;
 }
 
 .hero .hero-shapes .rectangle-7 {
+  width: 26.46px;
+  height: 4.73px;
+  background: #6070ff;
+  transform: matrix(0.76, 0.65, 0.65, -0.76, 0, 0);
   left: 48.14%;
-  top: 15.14%;
+  top: 10%;
 }
 
 .hero .hero-shapes .eclipse-3 {
-  left: 83.33%;
-  top: 10.02%;
+  background-image: url("../../assets/img/hero/Ellipse-3.svg");
+  width: 105px;
+  height: 105px;
+  left: 85%;
+  top: 4%;
 }
 
 .hero .hero-shapes .eclipse-4 {
+  background-image: url("../../assets/img/hero/Ellipse-4.svg");
+  width: 20px;
+  height: 20px;
   left: 58.26%;
-  top: 71.57%;
+  top: 80.57%;
 }
 
 .hero .hero-shapes .eclipse-5 {
+  background-image: url("../../assets/img/hero/Ellipse-5.svg");
+  width: 11px;
+  height: 10px;
   left: 49.16%;
-  top: 16.99%;
+  top: 11%;
 }
 
 .hero .hero-shapes .eclipse-6 {
-  left: 81.53%;
-  top: 59.15%;
+  background-image: url("../../assets/img/hero/Ellipse-6.svg");
+  width: 15px;
+  height: 15px;
+  left: 20%;
+  top: 85%;
 }
 
 .hero .hero-shapes .eclipse-7 {
+  background-image: url("../../assets/img/hero/Ellipse-7.svg");
+  width: 15px;
+  height: 15px;
   left: 67.01%;
-  top: 5.66%;
+  top: 3.66%;
 }
 
 .hero .hero-shapes .eclipse-8 {
+  background-image: url("../../assets/img/hero/Ellipse-8.svg");
+  width: 15px;
+  height: 15px;
   left: 26.32%;
   top: 6.97%;
 }
 
 .hero .hero-shapes .eclipse-11 {
-  left: 4.53%;
-  top: 9.91%;
+  background-image: url("../../assets/img/hero/Ellipse-11.svg");
+  width: 80.48px;
+  height: 38px;
+  left: -8%;
+  top: 0.91%;
 }
 
 .hero .hero-shapes .eclipse-12 {
-  left: 20.19%;
-  top: 72.77%;
+  background-image: url("../../assets/img/hero/Ellipse-12.svg");
+  width: 24.14px;
+  height: 12.07px;
+  left: 80%;
+  top: 65.77%;
 }
 
 .hero .hero-shapes .eclipse-13 {
-  left: 19.17%;
-  top: 73.97%;
+  background-image: url("../../assets/img/hero/Ellipse-13.svg");
+  width: 30.1px;
+  height: 30.1px;
+  left: 77.12%;
+  top: 67.1%;
 }
 
 .hero .hero-shapes .eclipse-14 {
+  background-image: url("../../assets/img/hero/Ellipse-14.svg");
+  width: 23px;
+  height: 23px;
   left: 5.07%;
   top: 44.77%;
 }
@@ -507,6 +557,8 @@ svg {
   flex-wrap: wrap;
   justify-content: center;
   align-items: baseline;
+  border-top-right-radius: 100px;
+  border-top: 1px solid #dfe1e6;
 }
 
 .about-me .top,
@@ -576,10 +628,15 @@ svg {
 }
 
 .footer {
-  background-color: #6070ff;
+  background-color: #fff;
   position: relative;
-  padding: 120px 24px 48px;
   overflow: hidden;
+}
+
+.footer-inner {
+  background-color: #6070ff;
+  padding: 120px 24px 48px;
+  border-top-left-radius: 100px;
 }
 
 .footer .footer-shapes {
@@ -592,44 +649,74 @@ svg {
 
 .footer .footer-shapes .shape {
   position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: initial;
 }
 
 .footer .footer-shapes .rectangle-4 {
+  width: 74.7px;
+  height: 17.21px;
+  background: #7f8cff;
+  transform: rotate(-23.18deg);
   left: 84.14%;
-  top: 9.34%;
+  top: 5.64%;
 }
 
 .footer .footer-shapes .rectangle-6 {
+  width: 55.6px;
+  height: 9.95px;
+  background: #fff;
+  transform: rotate(-23.7deg);
   left: 23.4%;
-  top: 87.59%;
+  top: 88.59%;
 }
 
 .footer .footer-shapes .rectangle-7 {
-  left: 5.82%;
-  top: 39.95%;
+  width: 76.17px;
+  height: 13.63px;
+  background: #7f8cff;
+  transform: matrix(0.8, 0.6, 0.6, -0.8, 0, 0);
+  left: 72%;
+  top: 85%;
 }
 
 .footer .footer-shapes .ellipse-3 {
-  left: 85.9%;
-  top: 14.07%;
+  background-image: url("../../assets/img/footer/Ellipse-3.svg");
+  width: 90px;
+  height: 89px;
+  left: 87.9%;
+  top: 7.07%;
 }
 
 .footer .footer-shapes .ellipse-5 {
-  left: 5.23%;
-  top: 44.09%;
+  background-image: url("../../assets/img/footer/Ellipse-5.svg");
+  width: 31.11px;
+  height: 31.11px;
+  left: 72%;
+  top: 85.5%;
 }
 
 .footer .footer-shapes .ellipse-11 {
+  background-image: url("../../assets/img/footer/Ellipse-11.svg");
+  width: 41.18px;
+  height: 20.59px;
   left: 24.86%;
   top: 90.07%;
 }
 
 .footer .footer-shapes .ellipse-12 {
-  left: 32.64%;
-  top: 13.48%;
+  background-image: url("../../assets/img/footer/Ellipse-12.svg");
+  width: 21px;
+  height: 21px;
+  left: 42.64%;
+  top: 8.48%;
 }
 
 .footer .footer-shapes .ellipse-13 {
+  background-image: url("../../assets/img/footer/Ellipse-13.svg");
+  width: 75px;
+  height: 75px;
   left: 78.4%;
   top: 61.58%;
 }
@@ -752,8 +839,118 @@ svg {
     justify-content: center;
   }
 
+  .hero .hero-shapes .shape {
+    transform: scale(1);
+  }
+
+  .hero .hero-shapes .rectangle-4 {
+    width: 204px;
+    height: 47px;
+    background: #ebebff;
+    transform: rotate(-30deg);
+    left: 80%;
+    top: 6.96%;
+  }
+
+  .hero .hero-shapes .rectangle-5 {
+    width: 161.41px;
+    height: 28.87px;
+    background: #ebebff;
+    transform: rotate(23.34deg);
+    left: 50.79%;
+    top: 75.1%;
+  }
+
+  .hero .hero-shapes .rectangle-6 {
+    width: 108.67px;
+    height: 19.44px;
+    background: #ebebff;
+    transform: rotate(-46.14deg);
+    left: 0.4%;
+    top: 9.36%;
+  }
+
+  .hero .hero-shapes .rectangle-7 {
+    width: 56.01px;
+    height: 10.02px;
+    background: #6070ff;
+    transform: matrix(0.98, -0.21, -0.21, -0.98, 0, 0);
+    left: 48.14%;
+    top: 15.14%;
+  }
+
+  .hero .hero-shapes .eclipse-3 {
+    width: 224px;
+    height: 224px;
+    left: 83.33%;
+    top: 10.02%;
+  }
+
+  .hero .hero-shapes .eclipse-4 {
+    width: 47px;
+    height: 47px;
+    left: 58.26%;
+    top: 71.57%;
+  }
+
+  .hero .hero-shapes .eclipse-5 {
+    width: 23px;
+    height: 23px;
+    left: 49.16%;
+    top: 16.99%;
+  }
+
+  .hero .hero-shapes .eclipse-6 {
+    width: 75px;
+    height: 75px;
+    left: 81.53%;
+    top: 59.15%;
+  }
+
+  .hero .hero-shapes .eclipse-7 {
+    width: 39px;
+    height: 39px;
+    left: 67.01%;
+    top: 5.66%;
+  }
+
+  .hero .hero-shapes .eclipse-8 {
+    width: 15px;
+    height: 15px;
+    left: 26.32%;
+    top: 6.97%;
+  }
+
+  .hero .hero-shapes .eclipse-11 {
+    width: 80.48px;
+    height: 40.24px;
+    left: 4.53%;
+    top: 9.91%;
+  }
+
+  .hero .hero-shapes .eclipse-12 {
+    width: 36.9px;
+    height: 18.45px;
+    left: 20.19%;
+    top: 77.77%;
+  }
+
+  .hero .hero-shapes .eclipse-13 {
+    width: 46px;
+    height: 46px;
+    left: 19.17%;
+    top: 78.97%;
+  }
+
+  .hero .hero-shapes .eclipse-14 {
+    width: 23px;
+    height: 23px;
+    left: 5.07%;
+    top: 44.77%;
+  }
+
   .hero .hero-content {
-    width: 75%;
+    width: 64%;
     max-width: 1100px;
     display: flex;
     justify-content: center;
@@ -868,6 +1065,11 @@ svg {
     flex: 1;
   }
 
+  .footer .contact-intro .description {
+    max-width: 569px;
+    margin: auto;
+  }
+
   .footer .contact-form li {
     justify-content: center;
   }
@@ -896,6 +1098,85 @@ svg {
   }
 
   .footer .contact-form {
-    padding: 0 24px;
+    max-width: 447px;
+    margin: auto;
+  }
+
+  .footer .contact-form ul li textarea {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .footer .contact-form ul li input,
+  .footer .contact-form ul li textarea {
+    border-radius: 0;
+    padding: 12px 16px;
+  }
+
+  .footer .footer-shapes .rectangle-4 {
+    width: 107.2px;
+    height: 24.7px;
+    background: #7f8cff;
+    transform: rotate(-23.18deg);
+    left: 84.14%;
+    top: 12.34%;
+  }
+
+  .footer .footer-shapes .rectangle-6 {
+    width: 55.6px;
+    height: 9.95px;
+    background: #fff;
+    transform: rotate(-23.7deg);
+    left: 23.4%;
+    top: 88.59%;
+  }
+
+  .footer .footer-shapes .rectangle-7 {
+    width: 117.53px;
+    height: 21.03px;
+    background: #7f8cff;
+    transform: matrix(0.8, 0.6, 0.6, -0.8, 0, 0);
+    left: 5.82%;
+    top: 42.95%;
+  }
+
+  .footer .footer-shapes .ellipse-3 {
+    background-image: url("../../assets/img/footer/Ellipse-3.svg");
+    width: 129px;
+    height: 129px;
+    left: 85.9%;
+    top: 14.07%;
+  }
+
+  .footer .footer-shapes .ellipse-5 {
+    background-image: url("../../assets/img/footer/Ellipse-5.svg");
+    width: 48px;
+    height: 48px;
+    left: 5.23%;
+    top: 44.09%;
+  }
+
+  .footer .footer-shapes .ellipse-11 {
+    background-image: url("../../assets/img/footer/Ellipse-11.svg");
+    width: 41.18px;
+    height: 20.59px;
+    left: 24.86%;
+    top: 90.07%;
+  }
+
+  .footer .footer-shapes .ellipse-12 {
+    background-image: url("../../assets/img/footer/Ellipse-12.svg");
+    width: 27px;
+    height: 27px;
+    left: 32.64%;
+    top: 13.48%;
+  }
+
+  .footer .footer-shapes .ellipse-13 {
+    background-image: url("../../assets/img/footer/Ellipse-13.svg");
+    width: 75px;
+    height: 75px;
+    left: 78.4%;
+    top: 61.58%;
   }
 }
