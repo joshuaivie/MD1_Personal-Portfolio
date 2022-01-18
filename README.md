@@ -4,7 +4,7 @@
 
 A portfolio of my work.
 
-![screenshot](assets/img/screenshot.png)
+![screenshot](assets/img/screenshot-web.png)
 
 Additional description about the project and its features.
 
