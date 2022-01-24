@@ -30,6 +30,6 @@ function menuMob() {
   menuWrapper.classList.toggle('open-menu');
 }
 
-let myFuc = menuMob();
-let myFuct = topFunction();
-console.log(myFuc,myFuct);
+const myFunc = menuMob();
+const myFunc2 = topFunction();
+console.log(myFunc, myFunc2);
