@@ -199,9 +199,80 @@ svg {
   fill: #6070ff;
 }
 
+.menu-wrapper .menu-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 101;
+  background: #6070ff;
+  mix-blend-mode: multiply;
+  backdrop-filter: blur(10px);
+  opacity: 0;
+}
+
+.menu-wrapper.open-menu .menu-overlay {
+  opacity: 1;
+}
+
+.menu-wrapper.open-menu .menu-content {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 102;
+  width: calc(100vw - 48px);
+  height: calc(100vw - 48px);
+  padding: 24px;
+}
+
 .menu-toggle {
-  display: block;
+  display: flex;
+  flex-direction: column;
   position: relative;
+  height: 45px;
+  justify-content: center;
+}
+
+.menu-wrapper.open-menu .menu-toggle {
+  align-items: flex-end;
+}
+
+.menu-wrapper.open-menu .menu-toggle span {
+  position: absolute;
+  background: white;
+}
+
+.menu-wrapper.open-menu .navigation-menu {
+  display: block;
+}
+
+.menu-wrapper.open-menu .navigation-menu li {
+  margin-bottom: 24px;
+}
+
+.menu-wrapper.open-menu .navigation-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 44px;
+}
+
+.menu-wrapper.open-menu .menu-toggle span:first-child {
+  transform: translateY(-50%) rotate(45deg);
+  transform-origin: center;
+  top: 50%;
+}
+
+.menu-wrapper.open-menu .menu-toggle span:last-child {
+  transform: translateY(-50%) rotate(-45deg);
+  transform-origin: center;
+  top: 50%;
+}
+
+.menu-wrapper.open-menu .menu-toggle span:nth-child(2) {
+  display: none;
 }
 
 .menu-toggle span {
