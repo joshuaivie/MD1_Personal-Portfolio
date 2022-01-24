@@ -26,10 +26,10 @@ const topFunction = () => {
 // const menuToggle = document.getElementById('menuToggle');
 const menuWrapper = document.getElementById('menuWrapper');
 
-function menuMob() {
+const menuMob = () => {
   menuWrapper.classList.toggle('open-menu');
-}
+};
 
-const myFunc = menuMob();
-const myFunc2 = topFunction();
+const myFunc = menuMob;
+const myFunc2 = topFunction;
 console.log(myFunc, myFunc2);
