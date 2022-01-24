@@ -23,3 +23,13 @@ const topFunction = () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 };
+
+/* menu-mobile*/
+
+const menuToggle = document.getElementById('menuToggle');
+const menuWrapper = document.getElementById('menuWrapper');
+
+function menuMob (){
+     menuWrapper.classList.toggle('open-menu');  
+}
+
