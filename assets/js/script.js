@@ -29,3 +29,7 @@ const menuWrapper = document.getElementById('menuWrapper');
 function menuMob() {
   menuWrapper.classList.toggle('open-menu');
 }
+
+let myFuc = menuMob();
+let myFuct = topFunction();
+console.log(myFuc,myFuct);
