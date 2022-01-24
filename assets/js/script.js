@@ -1,5 +1,3 @@
-const menuButton = document.getElementById('menuButton');
-
 /* Scroll To Top */
 const scrollButton = document.getElementById('scrollToTop');
 
@@ -24,12 +22,10 @@ const topFunction = () => {
   document.documentElement.scrollTop = 0;
 };
 
-/* menu-mobile*/
-
-const menuToggle = document.getElementById('menuToggle');
+/* menu-mobile */
+// const menuToggle = document.getElementById('menuToggle');
 const menuWrapper = document.getElementById('menuWrapper');
 
-function menuMob (){
-     menuWrapper.classList.toggle('open-menu');  
+function menuMob() {
+  menuWrapper.classList.toggle('open-menu');
 }
-

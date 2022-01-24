@@ -169,7 +169,7 @@ header {
   position: fixed;
   right: 24px;
   bottom: 24px;
-  z-index: 100;
+  z-index: 90;
   border: none;
   color: #fff;
   display: none;
@@ -205,14 +205,16 @@ svg {
   top: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 101;
+  z-index: -1;
   background: #6070ff;
   mix-blend-mode: multiply;
   backdrop-filter: blur(10px);
   opacity: 0;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-wrapper.open-menu .menu-overlay {
+  z-index: 101;
   opacity: 1;
 }
 
@@ -238,13 +240,29 @@ svg {
   align-items: flex-end;
 }
 
-.menu-wrapper.open-menu .menu-toggle span {
-  position: absolute;
-  background: white;
+.navigation-menu {
+  display: none;
 }
 
 .menu-wrapper.open-menu .navigation-menu {
   display: block;
+}
+
+.technical-knowledge-list li {
+  padding: 12px;
+  background-color: #f7f7f9;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #253858;
+}
+
+.footer .contact-form li {
+  display: flex;
 }
 
 .menu-wrapper.open-menu .navigation-menu li {
@@ -257,6 +275,31 @@ svg {
   font-size: 32px;
   font-weight: 600;
   line-height: 44px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #6070ff;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-wrapper.open-menu .menu-toggle span {
+  position: absolute;
+  background: white;
+}
+
+.my-works .work-item .work-subtitle span {
+  height: 100%;
+  position: relative;
+}
+
+.my-works .work-item .work-subtitle span + span {
+  margin: 0 16px;
 }
 
 .menu-wrapper.open-menu .menu-toggle span:first-child {
@@ -273,16 +316,6 @@ svg {
 
 .menu-wrapper.open-menu .menu-toggle span:nth-child(2) {
   display: none;
-}
-
-.menu-toggle span {
-  display: block;
-  width: 24px;
-  height: 3px;
-  margin-bottom: 5px;
-  position: relative;
-  background: #6070ff;
-  border-radius: 3px;
 }
 
 .hero {
@@ -535,15 +568,6 @@ svg {
   line-height: 16px;
 }
 
-.my-works .work-item .work-subtitle span {
-  height: 100%;
-  position: relative;
-}
-
-.my-works .work-item .work-subtitle span + span {
-  margin: 0 16px;
-}
-
 .my-works .work-item .work-subtitle span:first-of-type {
   color: #344563;
   text-transform: uppercase;
@@ -685,19 +709,6 @@ svg {
   line-height: 24px;
 }
 
-.technical-knowledge-list li {
-  padding: 12px;
-  background-color: #f7f7f9;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 20px;
-  color: #253858;
-}
-
 .footer {
   background-color: #fff;
   position: relative;
@@ -819,10 +830,6 @@ svg {
   flex-grow: 1;
 }
 
-.footer .contact-form li {
-  display: flex;
-}
-
 .footer .contact-form ul li input,
 .footer .contact-form ul li textarea {
   background: #fff;
@@ -851,10 +858,6 @@ svg {
   color: #fff;
   border: solid 1px #7f8cff;
   background-color: #7f8cff;
-}
-
-.navigation-menu {
-  display: none;
 }
 
 .font-weight-normal {
