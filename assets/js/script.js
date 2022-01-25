@@ -1,4 +1,3 @@
-/* Scroll To Top */
 const scrollButton = document.getElementById('scrollToTop');
 
 const scrollFunction = () => {
@@ -33,3 +32,23 @@ const menuMob = () => {
 const myFunc = menuMob;
 const myFunc2 = topFunction;
 console.log(myFunc, myFunc2);
+
+const pdContainer =document.getElementById('pdContainer');
+const pdClose = document.getElementById('pdClose');
+
+const popUp = (id) => {
+
+  if(pdContainer.classList.contains('show')){
+    alert('show');
+
+  }
+  else {
+    pdContainer.classList.add('show');
+   
+  }
+
+}
+
+const closeBtn = ()=>{
+  pdContainer.classList.remove('show');
+}
