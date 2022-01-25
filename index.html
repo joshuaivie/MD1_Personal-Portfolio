@@ -75,7 +75,7 @@
   </section>
   <main>
     <section id="portfolio" class="my-works">
-      <div class="work-item">
+      <div class="work-item"  onclick="popUp(1);">
         <img alt="work-item-img" src="./assets/img/work/work-1-cover.png">
         <div class="work-item-content">
           <h3 class="work-title">Tonic</h3>
@@ -95,7 +95,7 @@
           <button class="view-work-btn">See Project</button>
         </div>
       </div>
-      <div class="work-item reverse-item">
+      <div class="work-item reverse-item" onclick="popUp(4);">
         <img alt="work-item-img" src="./assets/img/work/work-2-cover.png">
         <div class="work-item-content">
           <h3 class="work-title">Multi-Post Stories</h3>
@@ -117,7 +117,7 @@
           <button class="view-work-btn">See Project</button>
         </div>
       </div>
-      <div class="work-item">
+      <div class="work-item" onclick="popUp(2);">
         <img alt="work-item-img" src="./assets/img/work/work-3-cover.png">
         <div class="work-item-content">
           <h3 class="work-title">Facebook 360</h3>
@@ -139,7 +139,7 @@
           <button class="view-work-btn">See Project</button>
         </div>
       </div>
-      <div class="work-item reverse-item">
+      <div class="work-item reverse-item "onclick="popUp(3);">
         <img alt="work-item-img" src="./assets/img/work/work-4-cover.png">
         <div class="work-item-content">
           <h3 class="work-title">Uber Navigation</h3>
@@ -256,12 +256,12 @@
       </div>
     </div>
   </footer>
-  <div class="pd-container show" id="pdContainer">
+  <div class="pd-container" id="pdContainer">
     <div class="pd-overlay" id="pdOverlay"></div>
     <div class="pd-content" id="pdContent">
       <div class="pd-head">
         <h2 class="pd-title" id="pdTitle">Tonic</h2>
-        <span class="pd-close" id="pdClose">
+        <span class="pd-close" id="pdClose" onclick="closeBtn();">
         </span>
       </div>
       <div class="pd-subtitle" id="pdSubtitle">
