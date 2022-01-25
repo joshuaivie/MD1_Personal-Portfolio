@@ -21,17 +21,22 @@
       <a href="index.html" class="logo">
         <img src="./assets/img/logo.svg" alt="Joshua Ivie">
       </a>
-      <div id="menuToggle" class="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="navigation-menu">
-        <ul>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+      <div class="menu-wrapper" id="menuWrapper" onclick="menuMob()">
+        <div class="menu-overlay"></div>
+        <div class="menu-content">
+          <div id="menuToggle" class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="navigation-menu">
+            <ul>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </nav>
   </header>
@@ -69,9 +74,6 @@
     </div>
   </section>
   <main>
-    <button onclick="topFunction()" id="scrollToTop" class="scroll-to-top" title="Scroll to top"><i
-        class="fa fa-chevron-up" aria-hidden="true"></i>
-    </button>
     <section id="portfolio" class="my-works">
       <div class="work-item">
         <img alt="work-item-img" src="./assets/img/work/work-1-cover.png">
@@ -212,7 +214,7 @@
     </section>
 
   </main>
-  <footer class="footer">
+  <footer class="footer" id="contact">
     <div class="footer-inner">
       <div class="footer-shapes">
         <div class="shape rectangle-4"></div>
@@ -254,23 +256,10 @@
       </div>
     </div>
   </footer>
-  <script>
-    scrollButton = document.getElementById("scrollToTop");
-    window.onscroll = function () { scrollFunction() };
-
-    const scrollFunction = () => {
-      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        scrollButton.style.display = "block";
-      } else {
-        scrollButton.style.display = "none";
-      }
-    }
-
-    const topFunction = () => {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-  </script>
+  <button onclick="topFunction()" id="scrollToTop" class="scroll-to-top" title="Scroll to top"><i
+      class="fa fa-chevron-up" aria-hidden="true"></i>
+  </button>
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
