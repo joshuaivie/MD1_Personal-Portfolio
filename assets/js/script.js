@@ -40,9 +40,10 @@ const pdRole = document.getElementById('pdRole');
 const pdYear = document.getElementById('pdYear');
 const pdImage = document.getElementById('pdImage');
 const pdDescription = document.getElementById('pdDescription');
-const pdTechnologies = document.getElementById('pdTechnologies');
+const pdTechnologies = document.getElementById('pdTechnologies'); //pdTechnlogies
 const pdLive = document.getElementById('pdLive');
 const pdSource = document.getElementById('pdSource');
+
 
 const hasClass = (element, className) => (` ${element.className} `).indexOf(` ${className} `) > -1;
 
@@ -52,6 +53,14 @@ const renderDetails = (title, company, role, year, imageName, description, techn
   pdRole.innerHTML = role;
   pdYear.innerHTML = year;
   pdImage.src = `./assets/img/work-details/${imageName}`;
+  pdLive.setAttribute("href", live);
+  pdSource.setAttribute("href", github);
+  pdDescription.innerHTML = description;
+
+ for(let i=0; i < pdTechnologies.children.length; i++ ){
+  pdTechnologies.children[i].innerHTML = technologies[i];
+ }
+
 }
 
 const openDetails = (id) => {
@@ -61,7 +70,7 @@ const openDetails = (id) => {
 
   getDetailsList
     .then((list) => list.find((project) => project.id === id) || list[0])
-    .then((d) => renderDetails(d.title, d.company, d.role, d.year, d.imageName));
+    .then((d) => renderDetails(d.title, d.company, d.role, d.year, d.imageName, d.description, d.technologies, d.liveURL, d.github));
 };
 
 const closeDetails = () => {
