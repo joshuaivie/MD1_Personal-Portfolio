@@ -96,3 +96,111 @@ const func4 = closeDetails;
 // console.log(func1, func2, func3, func4);
 
 // form-validation
+
+const inputName = document.getElementById('userName');
+const inputEmail = document.getElementById('userEmail');
+const form = document.getElementById('form-contact');
+const textArea = document.getElementById('contact-message');
+
+const isRequired = value => value === '' ? false : true;
+const isBetween = (length, min, max) => length < min || length > max ? false : true;
+const isEmailValid = (email) => {
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+};
+
+const showError = (input,message) => {
+  const formField = input.parentElement
+  formField.classList.remove('success');
+  formField.classList.add('error');
+
+  const error = formField.querySelector('small');
+  error.textContent = message;
+}
+
+const showSuccess = (input) => {
+    const formField = input.parentElement;
+    formField.classList.remove('error');
+    formField.classList.add('success');
+
+    const error = formField.querySelector('small');
+    error.textContent='';
+}
+
+const checkName = () => {
+
+   const username = inputName.value.trim();
+   let valid =false;
+   const min = 3, max= 30;
+   if(!isRequired(username)){
+     showError(inputName, "Username cannot be blank");
+   }else if(!isBetween(username.length,min,max)){
+        showError(inputName, "User name must be betwen 3 and 30 characters");
+   }else {
+          showSuccess(inputName);
+          valid=true;
+   }
+   return valid;
+}
+
+const checkEmail =() => {
+  let valid=false;
+  const email = inputEmail.value.trim();
+  
+  if(!isRequired(email)){
+    showError(inputEmail, " Please fill email");
+  }else if(!isEmailValid(email)){
+    showError(inputEmail, " Please provide a valid email");
+  }else{
+    showSuccess(inputEmail);
+    valid=true;
+  }
+  return valid;
+}
+
+const checkMessage = () => {
+  let valid=false;
+  const min=25 , max=500;
+  const textMessage = textArea.value.trim();
+
+  if(!isRequired(textMessage)){
+    showError(textArea, "Please enter message");
+  }else if(!isBetween(textMessage.length, min, max)){
+        showError(textArea, "Message should atleast 25 - 500 characters");
+  }else{
+    showSuccess(textArea);
+    valid=true;
+  }
+  return true;
+}
+
+form.addEventListener('submit', function(e){
+ e.preventDefault();
+
+ let isUsernameValid = checkName(), isEmailValid = checkEmail(), isTextfieldValid = checkMessage();
+ let isFormValid = isUsernameValid && isEmailValid && isTextfieldValid;
+
+ if(isFormValid){
+  val();
+ }
+});
+
+function val(){
+  return true;
+}
+
+form.addEventListener('input', function(e){
+
+  switch(e.target.id){
+
+    case 'userName':
+       checkName();
+       break;
+    case 'userEmail':
+      checkEmail();
+      break;
+    case 'contact-message':
+      checkMessage();
+      break;
+  }
+});

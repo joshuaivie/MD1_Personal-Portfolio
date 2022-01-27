@@ -1468,3 +1468,21 @@ svg {
     padding: 0 0 0 12px;
   }
 }
+
+/* form-validation */
+
+ form.error input {
+  border: 3px solid #dc3545;
+}
+form.success input {
+  border: 3px solid #28a745;
+}
+.form-field{
+  display: flex;
+  flex-direction: column;
+}
+.form-field small {
+   color: #ffc107;
+   margin: 0;
+   word-wrap: break-word;
+}
