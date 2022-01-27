@@ -304,8 +304,26 @@ svg {
   position: relative;
 }
 
+.pd-container .pd-content .pd-head span {
+  color: #67798e;
+  font-size: 24px;
+}
+
+.pd-container .pd-content .pd-subtitle span {
+  color: #7a869a;
+  position: relative;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 600;
+  height: 100%;
+}
+
 .my-works .work-item .work-subtitle span + span {
   margin: 0 16px;
+}
+
+.pd-container .pd-content .pd-subtitle span + span {
+  margin: 0 12px;
 }
 
 .menu-wrapper.open-menu .menu-toggle span:first-child {
@@ -936,32 +954,14 @@ svg {
   color: #172b4d;
 }
 
-.pd-container .pd-content .pd-head span {
-  color: #67798e;
-  font-size: 24px;
-}
-
 .pd-container .pd-content .pd-subtitle {
   padding: 12px 0 16px;
-}
-
-.pd-container .pd-content .pd-subtitle span {
-  color: #7a869a;
-  position: relative;
-  font-size: 13px;
-  line-height: 16px;
-  font-weight: 600;
-  height: 100%;
 }
 
 .pd-container .pd-content .pd-subtitle span:first-of-type {
   color: #344563;
   text-transform: uppercase;
   margin-right: 12px;
-}
-
-.pd-container .pd-content .pd-subtitle span + span {
-  margin: 0 12px;
 }
 
 .pd-container .pd-content .pd-subtitle span + span::before {
@@ -1028,18 +1028,32 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.pd-container .pd-content .pd-actions .pd-action-btn:active,
-.pd-container .pd-content .pd-actions .pd-action-btn:enabled {
   color: #6070ff;
   border: solid 1px #6070ff;
   background-color: #fff;
+  text-decoration: none;
+}
+
+.pd-container .pd-content .pd-actions .pd-action-btn:hover {
+  color: #fff;
+  border: solid 1px #6070ff;
+  background-color: #6070ff;
 }
 
 .pd-container .pd-content .pd-actions .pd-action-btn i {
   font-size: 22px;
   padding: 0 8px;
+}
+
+.form-field.error {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field small {
+  color: #ffc800;
+  margin: 0;
+  word-wrap: break-word;
 }
 
 @media (min-width: 992px) {
@@ -1467,22 +1481,4 @@ svg {
     flex: 1;
     padding: 0 0 0 12px;
   }
-}
-
-/* form-validation */
-
- form.error input {
-  border: 3px solid #dc3545;
-}
-form.success input {
-  border: 3px solid #28a745;
-}
-.form-field{
-  display: flex;
-  flex-direction: column;
-}
-.form-field small {
-   color: #ffc107;
-   margin: 0;
-   word-wrap: break-word;
 }
