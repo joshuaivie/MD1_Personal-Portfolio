@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 /* eslint-disable max-len */
 
 // 1. Scroll To Top
@@ -40,40 +41,26 @@ const pdRole = document.getElementById('pdRole');
 const pdYear = document.getElementById('pdYear');
 const pdImage = document.getElementById('pdImage');
 const pdDescription = document.getElementById('pdDescription');
-const pdTechnologies = document.getElementById('pdTechnologies'); //pdTechnlogies
+const pdTechnologies = document.getElementById('pdTechnologies');
 const pdLive = document.getElementById('pdLive');
 const pdSource = document.getElementById('pdSource');
-
 
 const hasClass = (element, className) => (` ${element.className} `).indexOf(` ${className} `) > -1;
 
 const renderDetails = (title, company, role, year, imageName, description, technologies, live, github) => {
-  // pdTitle.innerHTML = title;
+  pdTitle.innerHTML = title;
   pdCompany.innerHTML = company;
   pdRole.innerHTML = role;
   pdYear.innerHTML = year;
   pdImage.src = `./assets/img/work-details/${imageName}`;
-  pdLive.setAttribute("href", live);
-  pdSource.setAttribute("href", github);
+  pdLive.setAttribute('href', live);
+  pdSource.setAttribute('href', github);
   pdDescription.innerHTML = description;
 
- for(let i=0; i < pdTechnologies.children.length; i++ ){
-  pdTechnologies.children[i].innerHTML = technologies[i];
- }
-
-const titles=[];
-// let nodeslist = document.querySelectorAll('h3');
-document.querySelectorAll('h3.work-title').forEach((item) => {
-  titles.push(item.textContent);
-});
-// console.log("The title:" + titles.length);
-// console.log("The nodeLen:" + nodeslist.length);
- for (let x =0; x < titles.length;x++){
-  console.log(`The title:${titles[x]}`);
- pdTitle.innerHTML=titles[x];
- }
-
-}
+  for (let i = 0; i < pdTechnologies.children.length; i++) {
+    pdTechnologies.children[i].innerHTML = technologies[i];
+  }
+};
 
 const openDetails = (id) => {
   if (!hasClass(pdContainer, 'show')) {
@@ -95,7 +82,5 @@ const func1 = menuMob;
 const func2 = topFunction;
 const func3 = renderDetails;
 const func4 = closeDetails;
-// console.log(func1, func2, func3, func4);
-
-
-
+const func5 = openDetails;
+console.log(func1, func2, func3, func4, func5);
