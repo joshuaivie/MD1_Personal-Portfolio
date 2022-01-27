@@ -64,7 +64,7 @@ const renderDetails = (
   pdSource.setAttribute('href', github);
   pdDescription.innerHTML = description;
 
-  for (let i = 0; i < pdTechnologies.children.length; i + i) {
+  for (let i = 0; i < pdTechnologies.children.length; i += 1) {
     pdTechnologies.children[i].innerHTML = technologies[i];
   }
 };
