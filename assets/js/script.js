@@ -1,7 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-plusplus */
-/* eslint-disable max-len */
-
 // 1. Scroll To Top
 const scrollButton = document.getElementById('scrollToTop');
 
@@ -46,9 +42,19 @@ const pdTechnologies = document.getElementById('pdTechnologies');
 const pdLive = document.getElementById('pdLive');
 const pdSource = document.getElementById('pdSource');
 
-const hasClass = (element, className) => (` ${element.className} `).indexOf(` ${className} `) > -1;
+const hasClass = (element, className) => ` ${element.className} `.indexOf(` ${className} `) > -1;
 
-const renderDetails = (title, company, role, year, imageName, description, technologies, live, github) => {
+const renderDetails = (
+  title,
+  company,
+  role,
+  year,
+  imageName,
+  description,
+  technologies,
+  live,
+  github,
+) => {
   pdTitle.innerHTML = title;
   pdCompany.innerHTML = company;
   pdRole.innerHTML = role;
@@ -58,7 +64,7 @@ const renderDetails = (title, company, role, year, imageName, description, techn
   pdSource.setAttribute('href', github);
   pdDescription.innerHTML = description;
 
-  for (let i = 0; i < pdTechnologies.children.length; i++) {
+  for (let i = 0; i < pdTechnologies.children.length; i += 1) {
     pdTechnologies.children[i].innerHTML = technologies[i];
   }
 };
@@ -70,7 +76,17 @@ const openDetails = (id) => {
 
   getDetailsList
     .then((list) => list.find((project) => project.id === id) || list[0])
-    .then((d) => renderDetails(d.title, d.company, d.role, d.year, d.imageName, d.description, d.technologies, d.liveURL, d.github));
+    .then((d) => renderDetails(
+      d.title,
+      d.company,
+      d.role,
+      d.year,
+      d.imageName,
+      d.description,
+      d.technologies,
+      d.liveURL,
+      d.github,
+    ));
 };
 
 const closeDetails = () => {
@@ -85,8 +101,8 @@ const inputEmail = document.getElementById('userEmail');
 const form = document.getElementById('form-contact');
 const textArea = document.getElementById('contactMessage');
 
-const isRequired = (value) => (value !== '');
-const isBetween = (length, min, max) => (!(length < min || length > max));
+const isRequired = (value) => value !== '';
+const isBetween = (length, min, max) => !(length < min || length > max);
 const isEmailValid = (email) => {
   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(email);
@@ -158,12 +174,8 @@ const checkMessage = () => {
     showSuccess(textArea);
     valid = true;
   }
-  return true;
+  return valid;
 };
-
-function val() {
-  return true;
-}
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -174,7 +186,7 @@ form.addEventListener('submit', (e) => {
   const isFormValid = isUsernameValid && isEmailValid && isTextFieldValid;
 
   if (isFormValid) {
-    val();
+    form.submit();
   }
 });
 
@@ -217,3 +229,5 @@ form.addEventListener('input', (e) => {
       checkName();
   }
 });
+
+console.log(topFunction, menuMob, openDetails, closeDetails);
