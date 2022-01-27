@@ -66,8 +66,6 @@ const titles=[];
 document.querySelectorAll('h3.work-title').forEach((item) => {
   titles.push(item.textContent);
 });
-// console.log("The title:" + titles.length);
-// console.log("The nodeLen:" + nodeslist.length);
  for (let x =0; x < titles.length;x++){
   console.log(`The title:${titles[x]}`);
  pdTitle.innerHTML=titles[x];
@@ -97,5 +95,4 @@ const func3 = renderDetails;
 const func4 = closeDetails;
 // console.log(func1, func2, func3, func4);
 
-
-
+// form-validation
