@@ -151,6 +151,11 @@ const checkEmail =() => {
     showError(inputEmail, " Please fill email");
   }else if(!isEmailValid(email)){
     showError(inputEmail, " Please provide a valid email");
+  }else if(isRequired(email)){
+     const pattern = /[A-Z]/;
+     if(pattern.test(inputEmail.value)){
+       showError(inputEmail, "Email has to lower case");
+     }
   }else{
     showSuccess(inputEmail);
     valid=true;
