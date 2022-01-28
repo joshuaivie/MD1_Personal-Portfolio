@@ -99,7 +99,7 @@ const closeDetails = () => {
 const inputName = document.getElementById('userName');
 const inputEmail = document.getElementById('userEmail');
 const form = document.getElementById('form-contact');
-const textArea = document.getElementById('contact-message');
+const textArea = document.getElementById('contactMessage');
 
 const isRequired = (value) => value !== '';
 const isBetween = (length, min, max) => !(length < min || length > max);
@@ -190,7 +190,31 @@ form.addEventListener('submit', (e) => {
   }
 });
 
+// 5. Local Storage
+const formModel = {
+  userName: 'Isaac',
+  userEmail: '',
+  contactMessage: '',
+};
+
+const currentFormData = localStorage.getItem('formData');
+if (currentFormData) {
+  const formData = JSON.parse(currentFormData);
+  inputName.value = formData.userName;
+  inputEmail.value = formData.userEmail;
+  textArea.value = formData.contactMessage;
+} else {
+  localStorage.setItem('formData', JSON.stringify(formModel));
+}
+
+const updateLocalStorage = (field, value) => {
+  const formData = JSON.parse(localStorage.getItem('formData'));
+  formData[`${field}`] = value;
+  localStorage.setItem('formData', JSON.stringify(formData));
+};
+
 form.addEventListener('input', (e) => {
+  updateLocalStorage(e.target.id, e.target.value);
   switch (e.target.id) {
     case 'userName':
       checkName();
@@ -206,4 +230,4 @@ form.addEventListener('input', (e) => {
   }
 });
 
-console.log(topFunction, menuMob, menuMob, openDetails, closeDetails);
+console.log(topFunction, menuMob, openDetails, closeDetails);
