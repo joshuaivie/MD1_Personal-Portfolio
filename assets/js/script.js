@@ -231,4 +231,3 @@ form.addEventListener('input', (e) => {
 });
 
 console.log(topFunction, menuMob, openDetails, closeDetails);
-
