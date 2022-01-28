@@ -1,6 +1,3 @@
-/* eslint-disable no-plusplus */
-/* eslint-disable max-len */
-
 // 1. Scroll To Top
 const scrollButton = document.getElementById('scrollToTop');
 
@@ -15,7 +12,7 @@ const scrollFunction = () => {
   }
 };
 
-window.onscroll = function () {
+window.onscroll = () => {
   scrollFunction();
 };
 
@@ -45,9 +42,19 @@ const pdTechnologies = document.getElementById('pdTechnologies');
 const pdLive = document.getElementById('pdLive');
 const pdSource = document.getElementById('pdSource');
 
-const hasClass = (element, className) => (` ${element.className} `).indexOf(` ${className} `) > -1;
+const hasClass = (element, className) => ` ${element.className} `.indexOf(` ${className} `) > -1;
 
-const renderDetails = (title, company, role, year, imageName, description, technologies, live, github) => {
+const renderDetails = (
+  title,
+  company,
+  role,
+  year,
+  imageName,
+  description,
+  technologies,
+  live,
+  github,
+) => {
   pdTitle.innerHTML = title;
   pdCompany.innerHTML = company;
   pdRole.innerHTML = role;
@@ -57,10 +64,40 @@ const renderDetails = (title, company, role, year, imageName, description, techn
   pdSource.setAttribute('href', github);
   pdDescription.innerHTML = description;
 
-  for (let i = 0; i < pdTechnologies.children.length; i++) {
+  for (let i = 0; i < pdTechnologies.children.length; i += 1) {
     pdTechnologies.children[i].innerHTML = technologies[i];
   }
 };
+
+const portfolio = document.getElementById('portfolio');
+
+getDetailsList.then((workItems) => {
+  workItems.forEach((item) => {
+    let technologies = '';
+    for (let i = 0; i < item.technologies.length; i += 1) {
+      technologies += `<li class="technology-tag">${item.technologies[i]}</li>`;
+    }
+    portfolio.innerHTML += `
+    <div class="work-item" onclick="openDetails(${item.id})">
+    <img alt="work-item-img" src="./assets/img/work-details/${item.imageName}">
+    <div class="work-item-content">
+      <h3 class="work-title">${item.title}</h3>
+      <div class="work-subtitle">
+        <span>${item.company}</span>
+        <span class="font-weight-normal">${item.role}</span>
+        <span class="font-weight-normal">${item.year}</span>
+      </div>
+      <p class="work-details">
+        ${item.description.substring(0, 200)}
+      </p>
+      <ul class="work-technologies">
+        ${technologies}
+      </ul>
+      <button class="view-work-btn">See Project</button>
+    </div>
+  </div>`;
+  });
+});
 
 const openDetails = (id) => {
   if (!hasClass(pdContainer, 'show')) {
@@ -69,7 +106,17 @@ const openDetails = (id) => {
 
   getDetailsList
     .then((list) => list.find((project) => project.id === id) || list[0])
-    .then((d) => renderDetails(d.title, d.company, d.role, d.year, d.imageName, d.description, d.technologies, d.liveURL, d.github));
+    .then((d) => renderDetails(
+      d.title,
+      d.company,
+      d.role,
+      d.year,
+      d.imageName,
+      d.description,
+      d.technologies,
+      d.liveURL,
+      d.github,
+    ));
 };
 
 const closeDetails = () => {
@@ -78,9 +125,4 @@ const closeDetails = () => {
   }
 };
 
-const func1 = menuMob;
-const func2 = topFunction;
-const func3 = renderDetails;
-const func4 = closeDetails;
-const func5 = openDetails;
-console.log(func1, func2, func3, func4, func5);
+console.log(menuMob, topFunction, openDetails, renderDetails, closeDetails);
