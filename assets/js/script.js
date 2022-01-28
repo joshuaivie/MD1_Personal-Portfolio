@@ -67,7 +67,7 @@ const renderDetails = (
   for (let i = 0; i < pdTechnologies.children.length; i += 1) {
     pdTechnologies.children[i].innerHTML = technologies[i];
   }
-};
+}
 
 const portfolio = document.getElementById('portfolio');
 
@@ -100,7 +100,7 @@ getDetailsList.then((workItems) => {
 });
 
 const openDetails = (id) => {
-  if (!hasClass(pdContainer, 'show')) {
+  if (hasClass(pdContainer, 'show')) {
     pdContainer.classList.add('show');
   }
 
