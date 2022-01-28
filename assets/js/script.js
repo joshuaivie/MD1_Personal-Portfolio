@@ -69,6 +69,36 @@ const renderDetails = (
   }
 };
 
+const portfolio = document.getElementById('portfolio');
+
+getDetailsList.then((workItems) => {
+  workItems.forEach((item) => {
+    let technologies = '';
+    for (let i = 0; i < item.technologies.length; i += 1) {
+      technologies += `<li class="technology-tag">${item.technologies[i]}</li>`;
+    }
+    portfolio.innerHTML += `
+    <div class="work-item" onclick="openDetails(${item.id})">
+    <img alt="work-item-img" src="./assets/img/work-details/${item.imageName}">
+    <div class="work-item-content">
+      <h3 class="work-title">${item.title}</h3>
+      <div class="work-subtitle">
+        <span>${item.company}</span>
+        <span class="font-weight-normal">${item.role}</span>
+        <span class="font-weight-normal">${item.year}</span>
+      </div>
+      <p class="work-details">
+        ${item.description.substring(0, 200)}
+      </p>
+      <ul class="work-technologies">
+        ${technologies}
+      </ul>
+      <button class="view-work-btn">See Project</button>
+    </div>
+  </div>`;
+  });
+});
+
 const openDetails = (id) => {
   if (!hasClass(pdContainer, 'show')) {
     pdContainer.classList.add('show');
