@@ -75,7 +75,7 @@
   </section>
   <main>
     <section id="portfolio" class="my-works">
-      <div class="work-item">
+      <div class="work-item" onclick="openDetails(1)">
         <img alt="work-item-img" src="./assets/img/work/work-1-cover.png">
         <div class="work-item-content">
           <h3 class="work-title">Tonic</h3>
@@ -95,7 +95,7 @@
           <button class="view-work-btn">See Project</button>
         </div>
       </div>
-      <div class="work-item reverse-item">
+      <div class="work-item reverse-item" onclick="openDetails(2)">
         <img alt="work-item-img" src="./assets/img/work/work-2-cover.png">
         <div class="work-item-content">
           <h3 class="work-title">Multi-Post Stories</h3>
@@ -117,7 +117,7 @@
           <button class="view-work-btn">See Project</button>
         </div>
       </div>
-      <div class="work-item">
+      <div class="work-item" onclick="openDetails(3)">
         <img alt="work-item-img" src="./assets/img/work/work-3-cover.png">
         <div class="work-item-content">
           <h3 class="work-title">Facebook 360</h3>
@@ -139,7 +139,7 @@
           <button class="view-work-btn">See Project</button>
         </div>
       </div>
-      <div class="work-item reverse-item">
+      <div class="work-item reverse-item" onclick="openDetails(4)">
         <img alt="work-item-img" src="./assets/img/work/work-4-cover.png">
         <div class="work-item-content">
           <h3 class="work-title">Uber Navigation</h3>
@@ -236,17 +236,22 @@
             needs coding. I'd love to help with it
           </div>
         </div>
-        <form action="https://formspree.io/f/xbjwdrql" method="post" class="contact-form">
+        <form action="https://formspree.io/f/xbjwdrql" method="post" name="contactForm" id="form-contact"
+          class="contact-form">
           <ul>
-            <li>
-              <input type="text" placeholder="Enter your Name" maxlength="30" required />
+            <li class="form-field">
+              <small></small>
+              <input type="text" id="userName" placeholder="Enter your Name" maxlength="30" />
+
             </li>
-            <li>
-              <input type="email" placeholder="Enter your email" required />
+            <li class="form-field">
+              <small></small>
+              <input type="email" id="userEmail" placeholder="Enter your email" />
             </li>
-            <li>
+            <li class="form-field">
+              <small></small>
               <textarea name="message" id="contact-message" cols="30" rows="7" maxlength="500"
-                placeholder="Write your message here" required></textarea>
+                placeholder="Write your message here"></textarea>
             </li>
             <li>
               <button type="submit" class="submit-btn">Get in Touch</button>
@@ -256,6 +261,42 @@
       </div>
     </div>
   </footer>
+  <div class="pd-container" id="pdContainer">
+    <div class="pd-overlay" id="pdOverlay"></div>
+    <div class="pd-content" id="pdContent">
+      <div class="pd-head">
+        <h2 class="pd-title" id="pdTitle"></h2>
+        <span class="pd-close" id="pdClose" onclick="closeDetails()">
+        </span>
+      </div>
+      <div class="pd-subtitle" id="pdSubtitle">
+        <span id="pdCompany"></span>
+        <span id="pdRole"></span>
+        <span id="pdYear"></span>
+      </div>
+      <img class="pd-image" alt="work image" id="pdImage" src="./assets/img/work-details/details-img-1.png">
+      <div class="pd-bottom">
+        <div class="pd-left">
+          <p class="pd-description" id="pdDescription"></p>
+        </div>
+        <div class="pd-right">
+          <ul class="pd-technologies" id="pdTechnologies">
+            <li>html</li>
+            <li>js</li>
+            <li>css</li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <hr>
+          <div class="pd-actions">
+            <a class="pd-action-btn" id="pdLive">See Live <i class="fa fa-external-link" aria-hidden="true"></i></a>
+            <a class="pd-action-btn" id="pdSource">See Source <i class="fa fa-github" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <button onclick="topFunction()" id="scrollToTop" class="scroll-to-top" title="Scroll to top"><i
       class="fa fa-chevron-up" aria-hidden="true"></i>
   </button>
