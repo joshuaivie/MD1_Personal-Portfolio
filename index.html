@@ -150,17 +150,22 @@
             needs coding. I'd love to help with it
           </div>
         </div>
-        <form action="https://formspree.io/f/xbjwdrql" method="post" class="contact-form">
+        <form action="https://formspree.io/f/xbjwdrql" method="post" name="contactForm" id="form-contact"
+          class="contact-form">
           <ul>
-            <li>
-              <input type="text" placeholder="Enter your Name" maxlength="30" required />
+            <li class="form-field">
+              <small></small>
+              <input type="text" id="userName" placeholder="Enter your Name" maxlength="30" />
+
             </li>
-            <li>
-              <input type="email" placeholder="Enter your email" required />
+            <li class="form-field">
+              <small></small>
+              <input type="email" id="userEmail" placeholder="Enter your email" />
             </li>
-            <li>
-              <textarea name="message" id="contact-message" cols="30" rows="7" maxlength="500"
-                placeholder="Write your message here" required></textarea>
+            <li class="form-field">
+              <small></small>
+              <textarea name="message" id="contactMessage" cols="30" rows="7" maxlength="500"
+                placeholder="Write your message here"></textarea>
             </li>
             <li>
               <button type="submit" class="submit-btn">Get in Touch</button>

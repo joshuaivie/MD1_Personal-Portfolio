@@ -1045,6 +1045,17 @@ svg {
   padding: 0 8px;
 }
 
+.form-field.error {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field small {
+  color: #ffc800;
+  margin: 0;
+  word-wrap: break-word;
+}
+
 @media (min-width: 992px) {
   .top-navigation,
   .my-works,
