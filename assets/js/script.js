@@ -6,9 +6,9 @@ const scrollFunction = () => {
     document.body.scrollTop > 300
     || document.documentElement.scrollTop > 300
   ) {
-    scrollButton.style.display = 'block';
-  } else {
     scrollButton.style.display = 'none';
+  } else {
+    scrollButton.style.display = 'block';
   }
 };
 
